@@ -5,8 +5,9 @@
         v-model="item.completed"
         />
         <span :class="[item.completed ? 'completed':'','itemText']">{{item.name}}</span>
+        <span v-if="item.completed_at">{{'Done: '+item.completed_at}}</span>
         <button @click="removeItem()" class="trashcan">
-            <font-awesome-icon icon="trash"/>
+            <font-awesome-icon class="trash" icon="trash"/>
         </button>
     </div>
 </template>
@@ -16,19 +17,22 @@ export default {
     props:['item'],
     methods: {
         updateCheck(){
+          
             axios.put('api/item/'+this.item.id, {
-                item: this.item
+                    item: this.item
             })
             .then(response =>{
                 if (response.status==200) {
-                    this.$emit('itemChanged');
+                    this.$emit('itemchanged');
                 }
             })
             .catch(error=>{
                 console.log(error);
             })
+      
         },
         removeItem(){
+            if(confirm("Confirmez")){
             axios.delete('api/item/'+ this.item.id)
                 .then(response=>{
                     if (response.status==200) {
@@ -39,6 +43,7 @@ export default {
                     console.log(error);
                 })
         }
+          }
     }
 }
 </script>
@@ -64,5 +69,8 @@ export default {
         color: red;
         outline:none;
         cursor: pointer;
+    }
+    .trash{
+         font-size: 22px;
     }
 </style>

@@ -9,8 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
-    <body style="background-color:grey;">
-        <section style="box-sizing:border-box;padding: 10px ;font-weight:bold;font-size:3vw;color:grey;background:#fff;width:100%;margin:0px;text-align:center">
+    <body style="background-color:#4A5566;">
+        <section style="box-sizing:border-box;padding: 10px ;font-weight:bold;font-size:2.5vw;color:#4A5566;background:#fff;width:100%;margin:0px;text-align:center">
             Project 01 Laravel VueJS
         </section>
         <hr style="color:#fff;width:50%">

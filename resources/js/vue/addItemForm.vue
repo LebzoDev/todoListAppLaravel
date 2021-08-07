@@ -58,7 +58,7 @@ export default{
     }
 
     .plus{
-        font-size: 20px;
+        font-size: 27px;
         cursor: pointer;
     }
     .active{

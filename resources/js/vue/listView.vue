@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="(item, index) in items" :key="index">
+        <div v-for="(item, index) in items" :key="index" >
             <list-item 
                     :item="item"
                     class="item"
@@ -27,5 +27,6 @@ export default {
     background: #e6e6e6;
     padding: 5px;
     margin-top: 5px;
+    
 }
 </style>
