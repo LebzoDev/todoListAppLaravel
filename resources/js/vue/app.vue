@@ -1,8 +1,12 @@
 <template>
    
     <div class="todoListContainer">
+  
         <div class="heading">
-          <h2 id="title">Liste de taches à faire</h2>
+          <section class="sectionHeader">
+          <h2 id="title">TodoList App</h2>
+          <img src ="/img/logo.png" style="width:180px;" />
+        </section>
           <hr>
           <!-- <h4>Ajouter une nouvelle tache</h4> -->
           <add-item-form v-on:reloadlist="getList()" />
@@ -46,6 +50,12 @@ export default {
 </script>
 
 <style scoped>
+  .sectionHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   h4{
     margin-left: 15px;
   }
@@ -56,8 +66,8 @@ export default {
   }
 
   .heading{
-       border-radius: 5px;
-    background: #e6e6e6;
+    border-radius: 5px;
+    background: #E3C8BD;
     padding: 10px;
   }
 

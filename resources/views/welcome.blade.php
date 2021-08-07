@@ -12,11 +12,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body style="background-color:#4A5566;">
-        <section style="box-sizing:border-box;padding: 10px ;font-weight:bold;font-size:2.5vw;color:#4A5566;background:#fff;width:100%;margin:0px;text-align:center">
+        <section style="box-sizing:border-box;padding: 10px ;font-weight:bold;font-size:2.5vw;color:#4A5566;background:#E3C8BD;width:100%;margin:0px;text-align:center">
            Laravel-VueJS  Project 01 
         </section>
-        <hr style="background:#fff;color:#fff;width:50%;height:3px">
-        <hr style="background:#fff;color:#fff;width:50%;height:3px">
+        <hr style="background:#E3C8BD;width:50%;height:3px">
+        <hr style="background:#E3C8BD;width:50%;height:3px">
         <div id="app">
             <app></app>
         </div>
