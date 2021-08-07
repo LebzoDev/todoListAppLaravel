@@ -1,7 +1,9 @@
-<template>
+<template style="background:green">
+   
     <div class="todoListContainer">
         <div class="heading">
           <h2 id="title">Todo List</h2>
+          <h4>Ajouter une nouvelle tache</h4>
           <add-item-form v-on:reloadlist="getList()" />
         </div>
         <list-view 
@@ -43,7 +45,7 @@ export default {
 
 <style scoped>
   .todoListContainer{
-    width:350px;
+    width:600px;
     margin: auto;
   }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="addItem">
-        <input type="text" v-model="item.name"/>
+        <input type="text" class="entree" placeholder="Add a new Todo ..." v-model="item.name"/>
         <font-awesome-icon icon="plus-square" 
         @click="addItem()"
         :class="[item.name ? 'active':'inactive', 'plus']"></font-awesome-icon>
@@ -59,6 +59,7 @@ export default{
 
     .plus{
         font-size: 20px;
+        cursor: pointer;
     }
     .active{
         color: #00CE25;
@@ -66,5 +67,11 @@ export default{
 
     .inactive{
         color:#999999
+    }
+    .entree{
+         border-radius: 5px;
+    }
+    .entree:focus{
+        border:2px solid red;
     }
 </style>
