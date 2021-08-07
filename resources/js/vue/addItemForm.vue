@@ -1,9 +1,8 @@
 <template>
     <div class="addItem">
         <input type="text" class="entree" placeholder="Add a new Todo ..." v-model="item.name"/>
-        <font-awesome-icon icon="plus-square" 
-        @click="addItem()"
-        :class="[item.name ? 'active':'inactive', 'plus']"></font-awesome-icon>
+        <span v-if="item.completed_at">{{'Done: '+item.completed_at}}</span>
+          <button @click="addItem()" type="button" class="btn btn-success" :disabled="item.name ? false :true">Ajouter</button>
     </div>
 </template>
 

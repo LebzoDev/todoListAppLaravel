@@ -1,14 +1,18 @@
 <template>
     <div class="item">
-        <input type="checkbox"
-        @change="updateCheck()"
-        v-model="item.completed"
-        />
-        <span :class="[item.completed ? 'completed':'','itemText']">{{item.name}}</span>
-        <span v-if="item.completed_at">{{'Done: '+item.completed_at}}</span>
-        <button @click="removeItem()" class="trashcan">
+        <section>
+            <input type="checkbox"
+                @change="updateCheck()"
+                v-model="item.completed"/>
+            <span :class="[item.completed ? 'completed':'','itemText']">{{item.name}}</span>
+        </section>
+        <span v-if="item.completed_at">{{'Terminée:'+item.completed_at}}</span>
+         <span v-if="!item.completed_at">{{'Non Terminée'}}</span>
+      
+      <button type="button" @click="removeItem()" class="btn btn-danger">Supprimer</button>
+    <!-- <button @click="removeItem()" class="trashcan">
             <font-awesome-icon class="trash" icon="trash"/>
-        </button>
+        </button> -->
     </div>
 </template>
 
@@ -54,12 +58,12 @@ export default {
         color: #999999;
     }
     .itemText{
-        width: 100%;
+       
         margin-left: 20px;
     }
     .item{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -72,5 +76,8 @@ export default {
     }
     .trash{
          font-size: 22px;
+    }
+    input[type=checkbox]{
+        margin-left: 5px;
     }
 </style>

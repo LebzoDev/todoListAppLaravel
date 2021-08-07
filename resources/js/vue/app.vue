@@ -3,8 +3,10 @@
     <div class="todoListContainer">
         <div class="heading">
           <h2 id="title">Liste de taches à faire</h2>
-          <h4>Ajouter une nouvelle tache</h4>
+          <hr>
+          <!-- <h4>Ajouter une nouvelle tache</h4> -->
           <add-item-form v-on:reloadlist="getList()" />
+           <hr>
         </div>
         <list-view 
             :items="items"
@@ -54,6 +56,7 @@ export default {
   }
 
   .heading{
+       border-radius: 5px;
     background: #e6e6e6;
     padding: 10px;
   }
